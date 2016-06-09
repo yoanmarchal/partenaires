@@ -69,7 +69,7 @@ class partenaires_plugin_Public
          * class.
          */
 
-        wp_enqueue_style($this->partenaires_plugin, plugin_dir_url(__FILE__).'css/social-link-public.css', [], $this->version, 'all');
+        wp_enqueue_style($this->partenaires_plugin, plugin_dir_url(__FILE__).'css/partenaires-plugin-public.css', [], $this->version, 'all');
     }
 
     /**
@@ -92,6 +92,6 @@ class partenaires_plugin_Public
          * class.
          */
 
-        wp_enqueue_script($this->partenaires_plugin, plugin_dir_url(__FILE__).'js/social-link-public.js', ['jquery'], $this->version, false);
+        wp_enqueue_script($this->partenaires_plugin, plugin_dir_url(__FILE__).'js/partenaires-plugin-public.js', ['jquery'], $this->version, false);
     }
 }
