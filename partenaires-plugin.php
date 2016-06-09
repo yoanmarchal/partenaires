@@ -12,15 +12,15 @@
  * @since             1.0.1
  *
  * @wordpress-plugin
- * Plugin Name:       Slider plugin
- * Plugin URI:        http://example.com/social-link-uri/
- * Description:       Simple plugin for save && retrive social links
+ * Plugin Name:       Partenaires plugin
+ * Plugin URI:        http://example.com/slider-plugin-uri/
+ * Description:       add partenaires ctp
  * Version:           1.0.0
  * Author:            Yoan marchal
  * Author URI:        http://yoanmarchal.com/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       social-link
+ * Text Domain:       slider-plugin
  * Domain Path:       /languages
  */
 
@@ -31,32 +31,32 @@ if (!defined('WPINC')) {
 
 /**
  * The code that runs during plugin activation.
- * This action is documented in includes/class-slider-plugin-activator.php.
+ * This action is documented in includes/class-partenaires-plugin-activator.php.
  */
-function activate_slider_plugin()
+function activate_partenaires_plugin()
 {
-    require_once plugin_dir_path(__FILE__).'includes/class-slider-plugin-activator.php';
-    slider_plugin_Activator::activate();
+    require_once plugin_dir_path(__FILE__).'includes/class-partenaires-plugin-activator.php';
+    partenaires_plugin_Activator::activate();
 }
 
 /**
  * The code that runs during plugin deactivation.
- * This action is documented in includes/class-slider-plugin-deactivator.php.
+ * This action is documented in includes/class-partenaires-plugin-deactivator.php.
  */
-function deactivate_slider_plugin()
+function deactivate_partenaires_plugin()
 {
-    require_once plugin_dir_path(__FILE__).'includes/class-slider-plugin-deactivator.php';
-    slider_plugin_Deactivator::deactivate();
+    require_once plugin_dir_path(__FILE__).'includes/class-partenaires-plugin-deactivator.php';
+    partenaires_plugin_Deactivator::deactivate();
 }
 
-register_activation_hook(__FILE__, 'activate_slider_plugin');
-register_deactivation_hook(__FILE__, 'deactivate_slider_plugin');
+register_activation_hook(__FILE__, 'activate_partenaires_plugin');
+register_deactivation_hook(__FILE__, 'deactivate_partenaires_plugin');
 
 /**
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
-require plugin_dir_path(__FILE__).'includes/class-slider-plugin.php';
+require plugin_dir_path(__FILE__).'includes/class-partenaires-plugin.php';
 
 /**
  * Begins execution of the plugin.
@@ -67,9 +67,9 @@ require plugin_dir_path(__FILE__).'includes/class-slider-plugin.php';
  *
  * @since    1.0.0
  */
-function run_slider_plugin()
+function run_partenaires_plugin()
 {
-    $plugin = new slider_plugin();
+    $plugin = new partenaires_plugin();
     $plugin->run();
 }
-run_slider_plugin();
+run_partenaires_plugin();

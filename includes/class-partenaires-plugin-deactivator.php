@@ -16,7 +16,7 @@
  *
  * @author     Your Name <marchalyoan@gmail.com>
  */
-class slider_plugin_Deactivator
+class partenaires_plugin_Deactivator
 {
     /**
      * Short Description. (use period).

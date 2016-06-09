@@ -23,7 +23,7 @@
  *
  * @author     Your Name <marchalyoan@gmail.com>
  */
-class slider_plugin
+class partenaires_plugin
 {
     /**
      * The loader that's responsible for maintaining and registering all hooks that power
@@ -31,7 +31,7 @@ class slider_plugin
      *
      * @since    1.0.0
      *
-     * @var slider_plugin_Loader Maintains and registers all hooks for the plugin.
+     * @var partenaires_plugin_Loader Maintains and registers all hooks for the plugin.
      */
     protected $loader;
 
@@ -42,7 +42,7 @@ class slider_plugin
      *
      * @var string The string used to uniquely identify this plugin.
      */
-    protected $slider_plugin;
+    protected $partenaires_plugin;
 
     /**
      * The current version of the plugin.
@@ -64,7 +64,7 @@ class slider_plugin
      */
     public function __construct()
     {
-        $this->slider_plugin = 'social-link';
+        $this->partenaires_plugin = 'slider-plugin';
         $this->version = '1.0.0';
 
         $this->load_dependencies();
@@ -78,10 +78,10 @@ class slider_plugin
      *
      * Include the following files that make up the plugin:
      *
-     * - slider_plugin_Loader. Orchestrates the hooks of the plugin.
-     * - slider_plugin_i18n. Defines internationalization functionality.
-     * - slider_plugin_Admin. Defines all hooks for the admin area.
-     * - slider_plugin_Public. Defines all hooks for the public side of the site.
+     * - partenaires_plugin_Loader. Orchestrates the hooks of the plugin.
+     * - partenaires_plugin_i18n. Defines internationalization functionality.
+     * - partenaires_plugin_Admin. Defines all hooks for the admin area.
+     * - partenaires_plugin_Public. Defines all hooks for the public side of the site.
      *
      * Create an instance of the loader which will be used to register the hooks
      * with WordPress.
@@ -95,39 +95,39 @@ class slider_plugin
          * The class responsible for orchestrating the actions and filters of the
          * core plugin.
          */
-        require_once plugin_dir_path(dirname(__FILE__)).'includes/class-slider-plugin-loader.php';
+        require_once plugin_dir_path(dirname(__FILE__)).'includes/class-partenaires-plugin-loader.php';
 
         /**
          * The class responsible for defining internationalization functionality
          * of the plugin.
          */
-        require_once plugin_dir_path(dirname(__FILE__)).'includes/class-slider-plugin-i18n.php';
+        require_once plugin_dir_path(dirname(__FILE__)).'includes/class-partenaires-plugin-i18n.php';
 
         /**
          * The class responsible for defining all actions that occur in the admin area.
          */
-        require_once plugin_dir_path(dirname(__FILE__)).'admin/class-slider-plugin-admin.php';
+        require_once plugin_dir_path(dirname(__FILE__)).'admin/class-partenaires-plugin-admin.php';
 
         /**
          * The class responsible for defining all actions that occur in the public-facing
          * side of the site.
          */
-        require_once plugin_dir_path(dirname(__FILE__)).'public/class-slider-plugin-public.php';
+        require_once plugin_dir_path(dirname(__FILE__)).'public/class-partenaires-plugin-public.php';
 
-        $this->loader = new slider_plugin_Loader();
+        $this->loader = new partenaires_plugin_Loader();
     }
 
     /**
      * Define the locale for this plugin for internationalization.
      *
-     * Uses the slider_plugin_i18n class in order to set the domain and to register the hook
+     * Uses the partenaires_plugin_i18n class in order to set the domain and to register the hook
      * with WordPress.
      *
      * @since    1.0.0
      */
     private function set_locale()
     {
-        $plugin_i18n = new slider_plugin_i18n();
+        $plugin_i18n = new partenaires_plugin_i18n();
 
         $this->loader->add_action('plugins_loaded', $plugin_i18n, 'load_plugin_textdomain');
     }
@@ -140,7 +140,7 @@ class slider_plugin
      */
     private function define_admin_hooks()
     {
-        $plugin_admin = new slider_plugin_Admin($this->get_slider_plugin(), $this->get_version());
+        $plugin_admin = new partenaires_plugin_Admin($this->get_partenaires_plugin(), $this->get_version());
 
         $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_styles');
         $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts');
@@ -154,7 +154,7 @@ class slider_plugin
      */
     private function define_public_hooks()
     {
-        $plugin_public = new slider_plugin_Public($this->get_slider_plugin(), $this->get_version());
+        $plugin_public = new partenaires_plugin_Public($this->get_partenaires_plugin(), $this->get_version());
 
         $this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_styles');
         $this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_scripts');
@@ -178,9 +178,9 @@ class slider_plugin
      *
      * @return string The name of the plugin.
      */
-    public function get_slider_plugin()
+    public function get_partenaires_plugin()
     {
-        return $this->slider_plugin;
+        return $this->partenaires_plugin;
     }
 
     /**
@@ -188,7 +188,7 @@ class slider_plugin
      *
      * @since     1.0.0
      *
-     * @return slider_plugin_Loader Orchestrates the hooks of the plugin.
+     * @return partenaires_plugin_Loader Orchestrates the hooks of the plugin.
      */
     public function get_loader()
     {

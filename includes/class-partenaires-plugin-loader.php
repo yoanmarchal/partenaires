@@ -16,7 +16,7 @@
  *
  * @author     Your Name <marchalyoan@gmail.com>
  */
-class slider_plugin_Loader
+class partenaires_plugin_Loader
 {
     /**
      * The array of actions registered with WordPress.
