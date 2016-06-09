@@ -104,28 +104,28 @@ class partenaires_plugin_Admin
 
     public function init_cpt_partenaires()
     {
-        $labels = array(
-		'name'                => _x( 'partenaires', 'Post Type General Name', 'text_domain' ),
-        'singular_name'       => _x( 'Partenaire', 'Post Type Singular Name', 'text_domain' ),
-        'menu_name'           => __( 'Partenaire', 'text_domain' ),
-        'parent_item_colon'   => __( 'Parent Partenaire:', 'text_domain' ),
-        'all_items'           => __( 'All partenaires', 'text_domain' ),
-        'view_item'           => __( 'View Partenaire', 'text_domain' ),
-        'add_new_item'        => __( 'Add New Partenaire', 'text_domain' ),
-        'add_new'             => __( 'New Partenaire', 'text_domain' ),
-        'edit_item'           => __( 'Edit Partenaire', 'text_domain' ),
-        'update_item'         => __( 'Update Partenaire', 'text_domain' ),
-        'search_items'        => __( 'Search partenaires', 'text_domain' ),
-        'not_found'           => __( 'No partenaires found', 'text_domain' ),
-        'not_found_in_trash'  => __( 'No partenaires found in Trash', 'text_domain' ),
-    );
+        $labels = [
+        'name'                => _x('partenaires', 'Post Type General Name', 'text_domain'),
+        'singular_name'       => _x('Partenaire', 'Post Type Singular Name', 'text_domain'),
+        'menu_name'           => __('Partenaire', 'text_domain'),
+        'parent_item_colon'   => __('Parent Partenaire:', 'text_domain'),
+        'all_items'           => __('All partenaires', 'text_domain'),
+        'view_item'           => __('View Partenaire', 'text_domain'),
+        'add_new_item'        => __('Add New Partenaire', 'text_domain'),
+        'add_new'             => __('New Partenaire', 'text_domain'),
+        'edit_item'           => __('Edit Partenaire', 'text_domain'),
+        'update_item'         => __('Update Partenaire', 'text_domain'),
+        'search_items'        => __('Search partenaires', 'text_domain'),
+        'not_found'           => __('No partenaires found', 'text_domain'),
+        'not_found_in_trash'  => __('No partenaires found in Trash', 'text_domain'),
+    ];
 
-    $args = array(
-        'label'               => __( 'partenaires', 'text_domain' ),
-        'description'         => __( 'partenaires', 'text_domain' ),
+        $args = [
+        'label'               => __('partenaires', 'text_domain'),
+        'description'         => __('partenaires', 'text_domain'),
         'labels'              => $labels,
-        'supports'            => array( 'title', 'editor', 'thumbnail', 'page-attributes', 'custom-fields' ),
-        'taxonomies'          => array( 'category', 'post_tag' ),
+        'supports'            => ['title', 'editor', 'thumbnail', 'page-attributes', 'custom-fields'],
+        'taxonomies'          => ['category', 'post_tag'],
         'hierarchical'        => false,
         'public'              => true,
         'show_ui'             => true,
@@ -139,8 +139,8 @@ class partenaires_plugin_Admin
         'exclude_from_search' => true,
         'publicly_queryable'  => true,
         'capability_type'     => 'post',
-    );
+    ];
 
-    register_post_type( 'partenaires', $args );
+        register_post_type('partenaires', $args);
     }
 }
