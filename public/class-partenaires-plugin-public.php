@@ -41,7 +41,7 @@ class partenaires_plugin_Public
      * @since    1.0.0
      *
      * @param string $partenaires_plugin The name of the plugin.
-     * @param string $version       The version of this plugin.
+     * @param string $version            The version of this plugin.
      */
     public function __construct($partenaires_plugin, $version)
     {
