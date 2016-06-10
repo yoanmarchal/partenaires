@@ -13,7 +13,7 @@ add partenaires ctp
 
 == Description ==
 
-Minimal social plugin for wordpress
+Minimal Partenaires plugin for wordpress
 
 == Installation ==
 

@@ -64,7 +64,7 @@ class partenaires_plugin
      */
     public function __construct()
     {
-        $this->partenaires_plugin = 'slider-plugin';
+        $this->partenaires_plugin = 'partenaires-plugin';
         $this->version = '1.0.0';
 
         $this->load_dependencies();

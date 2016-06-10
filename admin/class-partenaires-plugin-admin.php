@@ -76,7 +76,7 @@ class partenaires_plugin_Admin
              * class.
              */
 
-            wp_enqueue_style($this->partenaires_plugin, plugin_dir_url(__FILE__).'css/slider-plugin-admin.css', [], $this->version, 'all');
+            wp_enqueue_style($this->partenaires_plugin, plugin_dir_url(__FILE__).'css/partenaires-plugin-admin.css', [], $this->version, 'all');
         }
 
         /**
@@ -99,30 +99,30 @@ class partenaires_plugin_Admin
              * class.
              */
 
-            wp_enqueue_script($this->partenaires_plugin, plugin_dir_url(__FILE__).'js/slider-plugin-admin.js', ['jquery'], $this->version, false);
+            wp_enqueue_script($this->partenaires_plugin, plugin_dir_url(__FILE__).'js/partenaires-plugin-admin.js', ['jquery'], $this->version, false);
         }
 
     public function init_cpt_partenaires()
     {
         $labels = [
-        'name'                => _x('partenaires', 'Post Type General Name', 'text_domain'),
-        'singular_name'       => _x('Partenaire', 'Post Type Singular Name', 'text_domain'),
-        'menu_name'           => __('Partenaire', 'text_domain'),
-        'parent_item_colon'   => __('Parent Partenaire:', 'text_domain'),
-        'all_items'           => __('All partenaires', 'text_domain'),
-        'view_item'           => __('View Partenaire', 'text_domain'),
-        'add_new_item'        => __('Add New Partenaire', 'text_domain'),
-        'add_new'             => __('New Partenaire', 'text_domain'),
-        'edit_item'           => __('Edit Partenaire', 'text_domain'),
-        'update_item'         => __('Update Partenaire', 'text_domain'),
-        'search_items'        => __('Search partenaires', 'text_domain'),
-        'not_found'           => __('No partenaires found', 'text_domain'),
-        'not_found_in_trash'  => __('No partenaires found in Trash', 'text_domain'),
+        'name'                => _x('partenaires', 'Post Type General Name', 'partenaires-plugin'),
+        'singular_name'       => _x('Partenaire', 'Post Type Singular Name', 'partenaires-plugin'),
+        'menu_name'           => __('Partenaire', 'partenaires-plugin'),
+        'parent_item_colon'   => __('Parent Partenaire:', 'partenaires-plugin'),
+        'all_items'           => __('All partenaires', 'partenaires-plugin'),
+        'view_item'           => __('View Partenaire', 'partenaires-plugin'),
+        'add_new_item'        => __('Add New Partenaire', 'partenaires-plugin'),
+        'add_new'             => __('New Partenaire', 'partenaires-plugin'),
+        'edit_item'           => __('Edit Partenaire', 'partenaires-plugin'),
+        'update_item'         => __('Update Partenaire', 'partenaires-plugin'),
+        'search_items'        => __('Search partenaires', 'partenaires-plugin'),
+        'not_found'           => __('No partenaires found', 'partenaires-plugin'),
+        'not_found_in_trash'  => __('No partenaires found in Trash', 'partenaires-plugin'),
     ];
 
         $args = [
-        'label'               => __('partenaires', 'text_domain'),
-        'description'         => __('partenaires', 'text_domain'),
+        'label'               => __('partenaires', 'partenaires-plugin'),
+        'description'         => __('partenaires', 'partenaires-plugin'),
         'labels'              => $labels,
         'supports'            => ['title', 'editor', 'thumbnail', 'page-attributes', 'custom-fields'],
         'taxonomies'          => ['category', 'post_tag'],
