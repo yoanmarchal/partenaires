@@ -133,7 +133,7 @@ class partenaires_plugin_Admin
         'show_in_nav_menus'   => false,
         'show_in_admin_bar'   => true,
         'menu_position'       => 20,
-        'menu_icon'           => '',
+        'menu_icon'           => 'dashicons-share',
         'can_export'          => false,
         'has_archive'         => false,
         'exclude_from_search' => true,
