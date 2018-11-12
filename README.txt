@@ -107,6 +107,9 @@ add to page partenaires to display all
 </div>
 
 == Changelog ==
+= 1.0.2 =
+Fix cant export data of Custom post type
+
 = 1.0.1 =
 Add documentation
 
